@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="fabric.js"></script>
+</head>
+
+<body>
+    <h2>Creating HardCoded Polygon</h2>
+    <canvas id="canvas"></canvas>
+    <script>
+
+
+        var canvas = new fabric.Canvas("canvas");
+        canvas.setWidth(document.body.scrollWidth);
+        canvas.setHeight(250);
+
+
+
+        var polygon = new fabric.Polygon(
+            [
+                { x: 500, y: 20 },
+                { x: 550, y: 60 },
+                { x: 550, y: 200 },
+                { x: 350, y: 200 },
+                { x: 350, y: 60 },
+                { x: 500, y: 20 },
+            ],
+            {
+                fill: "yellow",
+                stroke: "red",
+                strokeWidth: 2,
+            }
+        );
+
+        canvas.add(polygon);
+    </script>
+</body>
+
+</html>
